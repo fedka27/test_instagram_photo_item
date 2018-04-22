@@ -10,7 +10,7 @@ import com.github.fedka27.instagramphotoitem.model.Publication
 import kotlinx.android.synthetic.main.item_instagram_publication_photo.view.*
 
 class PublicationsAdapter(private val context: Context) : RecyclerView.Adapter<PublicationsAdapter.PublicationViewHolder>() {
-    val listPublications: MutableList<Publication> = mutableListOf()
+    private val listPublications: MutableList<Publication> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): PublicationViewHolder {
         return PublicationViewHolder(LayoutInflater.from(context).inflate(R.layout.item_instagram_publication_photo, parent, false))

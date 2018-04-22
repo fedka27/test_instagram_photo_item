@@ -9,8 +9,8 @@ import kotlinx.android.synthetic.main.item_image.view.*
 
 class ImageViewPagerAdapter(
         context: Context,
-        val listResImage: List<Int>,
-        val layoutInflater: LayoutInflater = LayoutInflater.from(context)
+        private val listResImage: List<Int>,
+        private val layoutInflater: LayoutInflater = LayoutInflater.from(context)
 ) : PagerAdapter() {
 
     override fun isViewFromObject(view: View?, `object`: Any?): Boolean = `object` == view

@@ -10,6 +10,4 @@ class Publication(
         val imageResList: List<Int>,
         val likes: Int,
         val comment: String?
-) : Serializable {
-
-}
+) : Serializable
