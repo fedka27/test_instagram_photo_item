@@ -7,10 +7,20 @@
 
     <style name="TextView.NameAppearance">
         <item name="android:textSize">@dimen/font_name_size</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="TextView.LocationAppearance">
         <item name="android:textSize">@dimen/font_location_size</item>
+    </style>
+
+    <style name="TextView.Likes">
+        <item name="android:textSize">@dimen/font_medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView.Comment">
+        <item name="android:textSize">@dimen/font_medium</item>
     </style>
 
 </resources>

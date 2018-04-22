@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">InstagramPhotoItem</string>
+    <string name="publication_likes_">%d Likes</string>
 </resources>

@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     tools:context="com.github.fedka27.instagramphotoitem.MainActivity">
 
-    <include layout="@layout/item_instagram_photo" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/item_instagram_publication_photo" />
 
 </FrameLayout>

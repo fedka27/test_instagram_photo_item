@@ -6,6 +6,7 @@
 
     <dimen name="font_name_size">18sp</dimen>
     <dimen name="font_location_size">16sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
 
     <dimen name="icon_thumb_size">32dp</dimen>
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingBottom="@dimen/margin_medium"
     android:paddingTop="@dimen/margin_medium">
@@ -47,7 +47,7 @@
 
         <ImageButton
             android:id="@+id/more_image_button"
-            style="ImageButton.Transparent"
+            style="@style/ImageButton.Transparent"
             android:layout_width="@dimen/clickable_size"
             android:layout_height="@dimen/clickable_size"
             android:layout_marginEnd="@dimen/margin_medium"
@@ -67,7 +67,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <CheckBox
+        <android.support.v7.widget.AppCompatCheckBox
             android:id="@+id/like_check_box"
             android:layout_width="@dimen/clickable_size"
             android:layout_height="@dimen/clickable_size"
@@ -102,15 +102,16 @@
             android:scaleType="fitXY"
             android:src="@drawable/ic_share" />
 
-
         <com.rd.PageIndicatorView
+            android:id="@+id/view_pager_indicators"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             app:piv_count="3"
             app:piv_selectedColor="@color/blue"
-            app:piv_unselectedColor="@color/gray" />
+            app:piv_unselectedColor="@color/gray"
+            app:piv_viewPager="@id/photos_view_pager" />
 
         <ImageButton
             android:id="@+id/bookmark_image_button"
@@ -124,5 +125,25 @@
             android:src="@drawable/ic_bookmark" />
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/likes_text_view"
+        style="@style/TextView.Likes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        tools:text="Some likes" />
+
+    <TextView
+        android:id="@+id/comment_text_view"
+        style="@style/TextView.Comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        tools:text="Some comment" />
 
 </LinearLayout>
