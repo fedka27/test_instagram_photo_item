@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/margin_medium"
-    android:paddingTop="@dimen/margin_medium">
+    android:paddingBottom="@dimen/margin_small"
+    android:paddingTop="@dimen/margin_small">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,17 +15,18 @@
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image_view"
             android:layout_width="@dimen/icon_thumb_size"
             android:layout_height="@dimen/icon_thumb_size"
-            android:layout_marginLeft="@dimen/margin_medium"
-            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
             android:src="@color/colorPrimaryDark" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_medium"
-            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -50,8 +51,8 @@
             style="@style/ImageButton.Transparent"
             android:layout_width="@dimen/clickable_size"
             android:layout_height="@dimen/clickable_size"
-            android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
             android:src="@drawable/ic_more" />
 
     </LinearLayout>
@@ -62,12 +63,27 @@
         android:layout_height="300dp"
         android:layout_marginTop="@dimen/margin_small" />
 
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/view_pager_indicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:gravity="center_horizontal"
+        android:minWidth="@dimen/clickable_size"
+        app:ci_drawable="@drawable/selector_vp_indicator"
+        app:ci_drawable_unselected="@color/gray"
+        app:ci_gravity="center"
+        app:ci_height="@dimen/vp_indicator_size"
+        app:ci_width="@dimen/vp_indicator_size" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:paddingEnd="@dimen/margin_medium"
-        android:paddingStart="@dimen/margin_medium">
+        android:paddingEnd="@dimen/margin_small"
+        android:paddingStart="@dimen/margin_small">
 
         <CheckBox
             android:id="@+id/like_check_box"
@@ -86,7 +102,7 @@
             android:layout_marginStart="@dimen/margin_small"
             android:layout_toEndOf="@+id/like_check_box"
             android:layout_toRightOf="@+id/like_check_box"
-            android:scaleType="fitXY"
+            android:scaleType="centerInside"
             android:src="@drawable/ic_comment" />
 
         <ImageButton
@@ -98,16 +114,8 @@
             android:layout_marginStart="@dimen/margin_small"
             android:layout_toEndOf="@id/comment_image_button"
             android:layout_toRightOf="@id/comment_image_button"
+            android:scaleType="centerInside"
             android:src="@drawable/ic_share" />
-
-        <me.relex.circleindicator.CircleIndicator
-            android:id="@+id/view_pager_indicators"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            app:ci_drawable="@color/blue"
-            app:ci_drawable_unselected="@color/gray" />
 
         <ImageButton
             android:id="@+id/bookmark_image_button"
@@ -116,6 +124,7 @@
             android:layout_height="@dimen/clickable_size"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
             android:src="@drawable/ic_bookmark" />
 
     </RelativeLayout>
@@ -125,8 +134,8 @@
         style="@style/TextView.Likes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_small"
         tools:text="Some likes" />
 
@@ -135,8 +144,8 @@
         style="@style/TextView.Comment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_medium"
-        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_small"
         android:layout_marginTop="@dimen/margin_small"
         tools:text="Some comment" />
 

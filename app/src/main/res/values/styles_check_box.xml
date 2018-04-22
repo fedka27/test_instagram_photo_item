@@ -6,7 +6,7 @@
     </style>
 
     <style name="CheckBox.Like">
-        <item name="android:background">@drawable/ic_like</item>
+        <item name="android:button">@drawable/selector_like</item>
     </style>
 
 </resources>

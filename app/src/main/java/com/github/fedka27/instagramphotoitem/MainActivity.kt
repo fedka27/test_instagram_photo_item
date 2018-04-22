@@ -24,7 +24,8 @@ MainActivity : AppCompatActivity() {
 
     private fun getPublication1(): Publication {
         return Publication(
-                "Fedya",
+                R.drawable.user_avatar,
+                "Username",
                 null,
                 arrayListOf(R.drawable.image1, R.drawable.image2),
                 3,
@@ -33,10 +34,11 @@ MainActivity : AppCompatActivity() {
 
     private fun getPublication2(): Publication {
         return Publication(
-                "Fedya 2",
+                R.drawable.user_avatar,
+                "Emanresu",
                 "Russia, Kaliningrad",
                 arrayListOf(R.drawable.image3, R.drawable.image2, R.drawable.image1),
                 13,
-                "Wow!!!")
+                "Wow!!! It's ...")
     }
 }

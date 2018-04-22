@@ -40,6 +40,7 @@ class PublicationsAdapter(private val context: Context) : RecyclerView.Adapter<P
 
         fun bind(publication: Publication) {
 
+            itemView.user_image_view.setImageResource(publication.imageResAvatar)
             itemView.name_text_view.text = publication.name
             itemView.location_text_view.let {
                 if (publication.location == null) it.visibility = GONE
