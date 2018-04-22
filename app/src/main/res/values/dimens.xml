@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+
+    <dimen name="font_name_size">18sp</dimen>
+    <dimen name="font_location_size">16sp</dimen>
+
+    <dimen name="icon_thumb_size">32dp</dimen>
+
+    <dimen name="clickable_size">40dp</dimen>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextView.NameAppearance">
+        <item name="android:textSize">@dimen/font_name_size</item>
+    </style>
+
+    <style name="TextView.LocationAppearance">
+        <item name="android:textSize">@dimen/font_location_size</item>
+    </style>
+
+</resources>

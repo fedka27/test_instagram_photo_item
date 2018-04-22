@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="ImageButton.Transparent">
+        <item name="android:background">@null</item>
+    </style>
+</resources>
