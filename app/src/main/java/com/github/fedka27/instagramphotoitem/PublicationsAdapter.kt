@@ -2,6 +2,8 @@ package com.github.fedka27.instagramphotoitem
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
 import android.view.View.GONE
 import android.view.ViewGroup
 import com.github.fedka27.instagramphotoitem.model.Publication
@@ -11,7 +13,7 @@ class PublicationsAdapter(private val context: Context) : RecyclerView.Adapter<P
     val listPublications: MutableList<Publication> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): PublicationViewHolder {
-        return PublicationViewHolder(parent!!)
+        return PublicationViewHolder(LayoutInflater.from(context).inflate(R.layout.item_instagram_publication_photo, parent, false))
     }
 
     override fun getItemCount(): Int = listPublications.size
@@ -31,8 +33,10 @@ class PublicationsAdapter(private val context: Context) : RecyclerView.Adapter<P
         notifyItemInserted(listPublications.size)
     }
 
-    class PublicationViewHolder(val viewGroup: ViewGroup)
-        : RecyclerView.ViewHolder(viewGroup.getLayoutView(R.layout.item_instagram_publication_photo)) {
+    class PublicationViewHolder(view: View)
+        : RecyclerView.ViewHolder(view) {
+
+        private val context = itemView.context
 
         fun bind(publication: Publication) {
 
@@ -42,8 +46,10 @@ class PublicationsAdapter(private val context: Context) : RecyclerView.Adapter<P
                 else it.text = publication.location
             }
 
-            itemView.photos_view_pager.adapter = ImageViewPagerAdapter(viewGroup.context, publication.imageResList)
-            itemView.likes_text_view.text = viewGroup.context.getString(R.string.publication_likes_, publication.likes)
+            itemView.photos_view_pager.adapter = ImageViewPagerAdapter(context, publication.imageResList)
+            itemView.view_pager_indicators.setViewPager(itemView.photos_view_pager)
+
+            itemView.likes_text_view.text = context.getString(R.string.publication_likes_, publication.likes)
             itemView.comment_text_view.text = publication.comment
         }
     }

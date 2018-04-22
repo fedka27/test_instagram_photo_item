@@ -13,8 +13,7 @@ class ImageViewPagerAdapter(
         val layoutInflater: LayoutInflater = LayoutInflater.from(context)
 ) : PagerAdapter() {
 
-
-    override fun isViewFromObject(view: View?, `object`: Any?): Boolean = `object` is View
+    override fun isViewFromObject(view: View?, `object`: Any?): Boolean = `object` == view
 
     override fun getCount(): Int = listResImage.size
 
@@ -23,7 +22,7 @@ class ImageViewPagerAdapter(
 
         view.image_view.setImageResource(listResImage[position])
 
-        container?.addView(view)
+        container?.addView(view, 0)
 
         return view
     }
